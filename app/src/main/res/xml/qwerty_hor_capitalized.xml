@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
 /*
 **
 ** Copyright 2008, The Android Open Source Project
@@ -18,128 +17,283 @@
 */
 -->
 <Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
-    android:verticalGap="0px"
-    android:keyHeight="45dp"
-    >
+
+    android:keyHeight="@dimen/key_height">
     <Row android:keyboardMode="@integer/keyboard_normal">
-        <Key android:codes="97"
-            android:keyEdgeFlags="left" android:keyIcon="@drawable/alpha_cap_a_horizontal"/>
-        <Key android:codes="101" android:keyIcon="@drawable/alpha_cap_e_horizontal"/>
-        <Key android:codes="98" android:keyIcon="@drawable/alpha_cap_b_horizontal"/>
-        <Key android:codes="102" android:keyIcon="@drawable/alpha_cap_f_horizontal"/>
-        <Key android:codes="103" android:keyIcon="@drawable/alpha_cap_g_horizontal"/>
-        <Key android:codes="108" android:keyIcon="@drawable/alpha_cap_l_horizontal" />
-        <Key android:codes="109" android:keyIcon="@drawable/alpha_cap_m_horizontal"/>
-        <Key android:codes="114" android:keyIcon="@drawable/alpha_cap_r_horizontal"/>
-        <Key android:codes="118" android:keyIcon="@drawable/alpha_cap_v_horizontal"/>
-        <Key android:codes="119" android:keyIcon="@drawable/alpha_cap_w_horizontal"/>
+        <Key
+            android:codes="97"
+            android:keyEdgeFlags="left"
+            android:keyIcon="@drawable/alpha_cap_a_horizontal" />
+        <Key
+            android:codes="101"
+            android:keyIcon="@drawable/alpha_cap_e_horizontal" />
+        <Key
+            android:codes="98"
+            android:keyIcon="@drawable/alpha_cap_b_horizontal" />
+        <Key
+            android:codes="102"
+            android:keyIcon="@drawable/alpha_cap_f_horizontal" />
+        <Key
+            android:codes="103"
+            android:keyIcon="@drawable/alpha_cap_g_horizontal" />
+        <Key
+            android:codes="108"
+            android:keyIcon="@drawable/alpha_cap_l_horizontal" />
+        <Key
+            android:codes="109"
+            android:keyIcon="@drawable/alpha_cap_m_horizontal" />
+        <Key
+            android:codes="114"
+            android:keyIcon="@drawable/alpha_cap_r_horizontal" />
+        <Key
+            android:codes="118"
+            android:keyIcon="@drawable/alpha_cap_v_horizontal" />
+        <Key
+            android:codes="119"
+            android:keyIcon="@drawable/alpha_cap_w_horizontal" />
     </Row>
 
-    <Row android:keyboardMode="@integer/keyboard_normal"  >
-        <Key android:codes="105" android:keyIcon="@drawable/alpha_cap_i_horizontal" android:horizontalGap="5%" android:keyEdgeFlags="left"/>
-        <Key android:codes="111" android:keyIcon="@drawable/alpha_cap_o_horizontal"/>
-        <Key android:codes="99" android:keyIcon="@drawable/alpha_cap_c_horizontal"/>
-        <Key android:codes="104" android:keyIcon="@drawable/alpha_cap_h_horizontal"/>
-        <Key android:codes="110" android:keyIcon="@drawable/alpha_cap_n_horizontal"/>
-        <Key android:codes="112" android:keyIcon="@drawable/alpha_cap_p_horizontal" />
-        <Key android:codes="115" android:keyIcon="@drawable/alpha_cap_s_horizontal"/>
-        <Key android:codes="120" android:keyIcon="@drawable/alpha_cap_x_horizontal"/>
-        <Key android:codes="121" android:keyIcon="@drawable/alpha_cap_y_horizontal"/>
+    <Row android:keyboardMode="@integer/keyboard_normal">
+        <Key
+            android:codes="105"
+            android:horizontalGap="5%"
+            android:keyEdgeFlags="left"
+            android:keyIcon="@drawable/alpha_cap_i_horizontal" />
+        <Key
+            android:codes="111"
+            android:keyIcon="@drawable/alpha_cap_o_horizontal" />
+        <Key
+            android:codes="99"
+            android:keyIcon="@drawable/alpha_cap_c_horizontal" />
+        <Key
+            android:codes="104"
+            android:keyIcon="@drawable/alpha_cap_h_horizontal" />
+        <Key
+            android:codes="110"
+            android:keyIcon="@drawable/alpha_cap_n_horizontal" />
+        <Key
+            android:codes="112"
+            android:keyIcon="@drawable/alpha_cap_p_horizontal" />
+        <Key
+            android:codes="115"
+            android:keyIcon="@drawable/alpha_cap_s_horizontal" />
+        <Key
+            android:codes="120"
+            android:keyIcon="@drawable/alpha_cap_x_horizontal" />
+        <Key
+            android:codes="121"
+            android:keyIcon="@drawable/alpha_cap_y_horizontal" />
     </Row>
 
-    <Row android:keyboardMode="@integer/keyboard_normal" android:keyBackground="@drawable/background_oped_orange">
-        <Key android:codes="-1" android:keyIcon="@drawable/capson_icon"
+    <Row
+        android:keyBackground="@drawable/background_oped_orange"
+        android:keyboardMode="@integer/keyboard_normal">
+        <Key
+            android:codes="-1"
+            android:isSticky="true"
+            android:keyEdgeFlags="left"
+            android:keyIcon="@drawable/capson_icon"
+            android:keyWidth="15%p" />
+
+        <Key
+            android:codes="117"
+            android:keyIcon="@drawable/alpha_cap_u_horizontal" />
+        <Key
+            android:codes="100"
+            android:keyIcon="@drawable/alpha_cap_d_horizontal" />
+        <Key
+            android:codes="106"
+            android:keyIcon="@drawable/alpha_cap_j_horizontal" />
+        <Key
+            android:codes="107"
+            android:keyIcon="@drawable/alpha_cap_k_horizontal" />
+        <Key
+            android:codes="113"
+            android:keyIcon="@drawable/alpha_cap_q_horizontal" />
+        <Key
+            android:codes="116"
+            android:keyIcon="@drawable/alpha_cap_t_horizontal" />
+        <Key
+            android:codes="122"
+            android:keyIcon="@drawable/alpha_cap_z_horizontal" />
+        <Key
+            android:codes="-5"
+            android:keyEdgeFlags="right"
+            android:keyIcon="@drawable/sym_keyboard_delete"
+            android:keyWidth="15%p" />
+    </Row>
+    <Row android:keyboardMode="@integer/keyboard_symbol">
+        <Key
+            android:codes="49"
+            android:keyLabel="1" />
+        <Key
+            android:codes="50"
+            android:keyLabel="2" />
+        <Key
+            android:codes="51"
+            android:keyLabel="3" />
+        <Key
+            android:codes="52"
+            android:keyBackground="@drawable/background_oped_orange"
+            android:keyLabel="4" />
+        <Key
+            android:codes="53"
+            android:keyLabel="5" />
+        <Key
+            android:codes="54"
+            android:keyLabel="6" />
+        <Key
+            android:codes="55"
+            android:keyLabel="7" />
+        <Key
+            android:codes="56"
+            android:keyLabel="8" />
+        <Key
+            android:codes="57"
+            android:keyLabel="9" />
+        <Key
+            android:codes="48"
+            android:keyLabel="0" />
+    </Row>
+
+    <Row android:keyboardMode="@integer/keyboard_symbol">
+        <Key
+            android:codes="33"
+            android:horizontalGap="5%p"
+            android:keyEdgeFlags="left"
+            android:keyLabel="!" />
+        <Key
+            android:codes="34"
+            android:keyLabel="&quot;" />
+        <Key
+            android:codes="39"
+            android:keyLabel="'" />
+        <Key
+            android:codes="58"
+            android:keyLabel=":" />
+        <Key
+            android:codes="59"
+            android:keyLabel=";" />
+        <Key
+            android:codes="47"
+            android:keyLabel="/" />
+        <Key
+            android:codes="63"
+            android:keyLabel="\?" />
+        <Key
+            android:codes="64"
+            android:keyEdgeFlags="right"
+            android:keyLabel="\@" />
+        <Key
+            android:codes="35"
+            android:keyLabel="\#" />
+
+    </Row>
+    <Row android:keyboardMode="@integer/keyboard_symbol">
+
+
+        <Key
+            android:codes="36"
+            android:horizontalGap="1%p"
+            android:keyEdgeFlags="left"
+            android:keyLabel="$" />
+        <Key
+            android:codes="37"
+            android:keyLabel="%" />
+        <Key
+            android:codes="38"
+            android:keyLabel="&amp;" />
+        <Key
+            android:codes="42"
+            android:keyLabel="*" />
+        <Key
+            android:codes="45"
+            android:keyLabel="-" />
+        <Key
+            android:codes="61"
+            android:keyLabel="=" />
+        <Key
+            android:codes="40"
+            android:keyLabel="(" />
+        <Key
+            android:codes="41"
+            android:keyEdgeFlags="right"
+            android:keyLabel=")" />
+        <Key
+            android:codes="-5"
+            android:keyEdgeFlags="right"
+            android:keyIcon="@drawable/sym_keyboard_delete"
+            android:keyWidth="15%p" />
+    </Row>
+
+
+    <Row
+        android:keyboardMode="@integer/keyboard_normal"
+        android:rowEdgeFlags="bottom">
+
+        <Key
+            android:codes="12"
+            android:keyIcon="@drawable/icons8globe"
+            android:keyWidth="15%p" />
+        <Key
+            android:codes="-2"
+            android:keyLabel="123"
+            android:keyWidth="15%p" />
+
+        <!--
+            android:codes: -101 is not a framework-defined key code but a key code that is
+            privately defined in com.example.android.softkeyboard.LatinKeyboardView.
+        -->
+        <Key
+            android:codes="32"
+            android:keyIcon="@drawable/sym_keyboard_space_holo_dark"
+            android:keyWidth="30%p" />
+        <Key
+            android:codes="46"
+            android:keyLabel="."
+            android:keyWidth="10%p" />
+        <Key
+            android:codes="44"
+            android:keyLabel=","
+            android:keyWidth="10%p" />
+        <Key
+            android:codes="-4"
+            android:keyIcon="@drawable/sym_keyboard_feedback_return"
+            android:keyWidth="20%p" />
+    </Row>
+    <Row
+        android:keyboardMode="@integer/keyboard_symbol"
+        android:rowEdgeFlags="bottom">
+        <Key
+            android:codes="12"
+            android:keyIcon="@drawable/icons8globe"
+            android:keyWidth="15%p" />
+        <Key
+            android:codes="-2"
+            android:keyLabel="ABC"
             android:keyWidth="15%p"
-            android:isSticky="true" android:keyEdgeFlags="left"/>
-
-        <Key android:codes="117" android:keyIcon="@drawable/alpha_cap_u_horizontal" />
-        <Key android:codes="100" android:keyIcon="@drawable/alpha_cap_d_horizontal"/>
-        <Key android:codes="106" android:keyIcon="@drawable/alpha_cap_j_horizontal"/>
-        <Key android:codes="107" android:keyIcon="@drawable/alpha_cap_k_horizontal"/>
-        <Key android:codes="113" android:keyIcon="@drawable/alpha_cap_q_horizontal" />
-        <Key android:codes="116" android:keyIcon="@drawable/alpha_cap_t_horizontal"/>
-        <Key android:codes="122" android:keyIcon="@drawable/alpha_cap_z_horizontal"/>
-        <Key android:codes="-5" android:keyIcon="@drawable/sym_keyboard_delete"
-            android:keyWidth="15%p" android:keyEdgeFlags="right"
-            android:isRepeatable="true"/>
-    </Row>
-    <Row android:keyboardMode="@integer/keyboard_symbol" >
-        <Key android:codes="49"   android:keyLabel="1"/>
-        <Key android:codes="50" android:keyLabel="2"/>
-        <Key android:codes="51" android:keyLabel="3"/>
-        <Key android:codes="52" android:keyLabel="4" android:keyBackground="@drawable/background_oped_orange"/>
-        <Key android:codes="53" android:keyLabel="5"/>
-        <Key android:codes="54" android:keyLabel="6"/>
-        <Key android:codes="55" android:keyLabel="7" />
-        <Key android:codes="56" android:keyLabel="8"/>
-        <Key android:codes="57" android:keyLabel="9"/>
-        <Key android:codes="48" android:keyLabel="0" />
-    </Row>
-
-    <Row  android:keyboardMode="@integer/keyboard_symbol" >
-        <Key android:codes="33" android:keyLabel="!" android:horizontalGap="5%p" android:keyEdgeFlags="left"/>
-        <Key android:codes="34" android:keyLabel="&quot;" />
-        <Key android:codes="39" android:keyLabel="'" />
-        <Key android:codes="58" android:keyLabel=":" />
-        <Key android:codes="59" android:keyLabel=";" />
-        <Key android:codes="47" android:keyLabel="/" />
-        <Key android:codes="63" android:keyLabel="\?" />
-        <Key android:codes="64" android:keyEdgeFlags="right" android:keyLabel="\@"
-            />
-        <Key android:codes="35" android:keyLabel="\#" />
-
-    </Row>
-    <Row  android:keyboardMode="@integer/keyboard_symbol" >
-
-
-        <Key android:codes="36" android:keyLabel="$" android:keyEdgeFlags="left" android:horizontalGap="1%p"/>
-        <Key android:codes="37" android:keyLabel="%" />
-        <Key android:codes="38" android:keyLabel="&amp;" />
-        <Key android:codes="42" android:keyLabel="*" />
-        <Key android:codes="45" android:keyLabel="-" />
-        <Key android:codes="61" android:keyLabel="=" />
-        <Key android:codes="40" android:keyLabel="(" />
-        <Key android:codes="41" android:keyEdgeFlags="right" android:keyLabel=")" />
-        <Key android:codes="-5" android:keyIcon="@drawable/sym_keyboard_delete"
-            android:keyWidth="15%p" android:keyEdgeFlags="right"
-            android:isRepeatable="true"/>
-    </Row>
-
-
-    <Row android:rowEdgeFlags="bottom" android:keyboardMode="@integer/keyboard_normal" >
-
-        <Key android:codes="12"  android:keyWidth="15%p"   android:keyIcon="@drawable/icons8globe"/>
-        <Key android:codes="-2" android:keyLabel="123" android:keyWidth="15%p"  />
+            android:keyboardMode="@integer/keyboard_symbol" />
 
         <!--
             android:codes: -101 is not a framework-defined key code but a key code that is
             privately defined in com.example.android.softkeyboard.LatinKeyboardView.
         -->
-        <Key android:codes="32" android:keyIcon="@drawable/sym_keyboard_space_holo_dark"
-            android:keyWidth="30%p" android:isRepeatable="true"/>
-        <Key android:codes="46" android:keyLabel="."
-            android:keyWidth="10%p"/>
-        <Key android:codes="44" android:keyLabel=","
-            android:keyWidth="10%p"/>
-        <Key android:codes="-4" android:keyIcon="@drawable/sym_keyboard_feedback_return"
-            android:keyWidth="20%p"/>
-    </Row>
-    <Row android:rowEdgeFlags="bottom" android:keyboardMode="@integer/keyboard_symbol">
-        <Key android:codes="12"  android:keyWidth="15%p"   android:keyIcon="@drawable/icons8globe"/>
-        <Key android:keyWidth="15%p" android:codes="-2" android:keyLabel="ABC" android:keyboardMode="@integer/keyboard_symbol"/>
-
-        <!--
-            android:codes: -101 is not a framework-defined key code but a key code that is
-            privately defined in com.example.android.softkeyboard.LatinKeyboardView.
-        -->
-        <Key android:codes="32" android:keyIcon="@drawable/sym_keyboard_space_holo_dark"
-            android:keyWidth="30%p" android:isRepeatable="true"/>
-        <Key android:codes="46" android:keyLabel="."
-            android:keyWidth="10%p"/>
-        <Key android:codes="44" android:keyLabel=","
-            android:keyWidth="10%p"/>
-        <Key android:codes="-4" android:keyIcon="@drawable/sym_keyboard_feedback_return"
-            android:keyWidth="20%p"/>
+        <Key
+            android:codes="32"
+            android:keyIcon="@drawable/sym_keyboard_space_holo_dark"
+            android:keyWidth="30%p" />
+        <Key
+            android:codes="46"
+            android:keyLabel="."
+            android:keyWidth="10%p" />
+        <Key
+            android:codes="44"
+            android:keyLabel=","
+            android:keyWidth="10%p" />
+        <Key
+            android:codes="-4"
+            android:keyIcon="@drawable/sym_keyboard_feedback_return"
+            android:keyWidth="20%p" />
 
     </Row>
 
