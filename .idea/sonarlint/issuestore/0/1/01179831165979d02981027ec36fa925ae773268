@@ -1,0 +1,50 @@
+
+ssquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(‡Š¤Îıÿÿÿÿ8™˜¼¥ú+
+Asquid:S1166"%Either log or rethrow this exception.(”ı¾8œ¤Š®ú+
+„squid:S1488"cImmediately return this expression instead of assigning it to the temporary variable "orientation".(±•Ê©şÿÿÿÿ8Ä¡†ø+
+Ssquid:S1659"2Declare "checkPressMilisecond" on a separate line.(ÔÊúúÿÿÿÿ8ìÄ—Óù+
+ssquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 25 to the 15 allowed.(Ş¸Ô¹úÿÿÿÿ8Ä¡†ø+
+Rsquid:S2696"6Make the enclosing method "static" or remove this set.(’îÎô8ú¿°ú+
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ä¡†ø+
+Rsquid:S2696"6Make the enclosing method "static" or remove this set.(Ë¿„ó8š›îÖù+
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8œ¤Š®ú+
+Rsquid:S2696"6Make the enclosing method "static" or remove this set.(¹µÃ8ú¿°ú+
+¢squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÃÔ¹úÿÿÿÿ8Ä¡†ø+
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¶¤ô­ú+
+Qsquid:S1659"5Declare "mSymbolsShiftedKeyboard" on a separate line.(ù‚8Ä¡†ø+
+Rsquid:S2696"6Make the enclosing method "static" or remove this set.(Ë¿„ó8¨‡´Öù+
+ssquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 41 to the 15 allowed.(¢—›—øÿÿÿÿ8Ä¡†ø+
+Asquid:S1166"%Either log or rethrow this exception.(”ı¾8™ó­ú+
+squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(•œÇÆ8Ä¡†ø+
+squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(–õ½à8Ä¡†ø+
+Rsquid:S2696"6Make the enclosing method "static" or remove this set.(¯É‹í8ú¿°ú+
+Wsquid:S2696"6Make the enclosing method "static" or remove this set.(ª¥¥úÿÿÿÿ8ú¿°ú+
+Wsquid:S2696"6Make the enclosing method "static" or remove this set.(òìÆ»üÿÿÿÿ8¢ï›×ù+
+Asquid:S1166"%Either log or rethrow this exception.(”ı¾8¶¤ô­ú+
+Gsquid:S1659"+Declare "beforeDelText" on a separate line.(ÀÎ£æ8Ó¹îØù+
+Ysquid:S1068"8Remove this unused "checkPressMilisecond" private field.(ÔÊúúÿÿÿÿ8ìÄ—Óù+
+Wsquid:S2696"6Make the enclosing method "static" or remove this set.(½½¶ÿÿÿÿÿ8ú¿°ú+
+Rsquid:S2696"6Make the enclosing method "static" or remove this set.(Ë¿„ó8¿ ‹İù+
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8™ó­ú+
+U
+squid:S106";Replace this usage of System.out or System.err by a logger.(¡ÁÃ8¸²¬ø+
+Rsquid:S2696"6Make the enclosing method "static" or remove this set.(äµØå8ú¿°ú+
+Wsquid:S2696"6Make the enclosing method "static" or remove this set.(ª¥¥úÿÿÿÿ8ú¿°ú+
+squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(“²ÀÈ8Ä¡†ø+
+l
+squid:S128"LEnd this switch case with an unconditional break, return or throw statement.(÷ç–õúÿÿÿÿ8ÏÉÌ®ú+
+Asquid:S1166"%Either log or rethrow this exception.(”ı¾8Ä¡†ø+
+5squid:S1065"Remove this unused label.(±ö€Õ8“«‚®ú+
+Dsquid:S1185"(Remove this method to simply inherit it.(ÀĞà8Ä¡†ø+
+Qsquid:S2696"6Make the enclosing method "static" or remove this set.(Æºé8ú¿°ú+
+Rsquid:S2696"6Make the enclosing method "static" or remove this set.(ÁÅéÆ8ú¿°ú+
+Psquid:S1143"4Remove this break statement from this finally block.(›ûä·8ÏÉÌ®ú+
+Msquid:S1659"1Declare "mNonSymbolsKeyboard" on a separate line.(ù‚8Ä¡†ø+
+œsquid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(èë­8ÏÉÌ®ú+
+squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(´ƒÅñ8Ä¡†ø+
+Wsquid:S2696"6Make the enclosing method "static" or remove this set.(»µë‹øÿÿÿÿ8ú¿°ú+
+Psquid:S1066"/Merge this if statement with the enclosing one.(Í²äùÿÿÿÿ8Ää£±ú+
+Wsquid:S2696"6Make the enclosing method "static" or remove this set.(¤‘¶šûÿÿÿÿ8Ää£±ú+
+Wsquid:S2696"6Make the enclosing method "static" or remove this set.(´Ú²Ûøÿÿÿÿ8Ää£±ú+
+Rsquid:S2696"6Make the enclosing method "static" or remove this set.(Øä„8Ää£±ú+
+squid:S1157"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(êÄÌ„8Ää£±ú+
