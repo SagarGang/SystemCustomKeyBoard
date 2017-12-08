@@ -6,4 +6,8 @@
     <color name="colorkeyback">#004BB2</color>
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
+
+    <color name="yellow">#F4FF81</color>
+    <color name="green">#388E3C</color>
+
 </resources>

@@ -92,7 +92,7 @@
             android:isRepeatable="true"
             android:keyEdgeFlags="right"
             android:keyLabel="del"
-            android:keyWidth="15%p" />
+            android:keyWidth="12%p" />
     </Row>
 
     <Row android:rowEdgeFlags="bottom">

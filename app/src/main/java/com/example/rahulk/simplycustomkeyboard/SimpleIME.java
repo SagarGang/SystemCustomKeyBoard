@@ -26,7 +26,9 @@ import static com.example.rahulk.simplycustomkeyboard.AppConstants.shiftOn;
 public class SimpleIME extends InputMethodService
         implements KeyboardView.OnKeyboardActionListener {
 
-     KeyboardView kv;
+//     KeyboardView kv;
+    CustomeKeyboardView customeKeyboardView;
+
     private Keyboard keyboard, mNonSymbolsKeyboard, mSymbolsShiftedKeyboard;
     int mKeyboardState = R.integer.keyboard_normal;
     int shiftDelCount = 0;
@@ -36,7 +38,7 @@ public class SimpleIME extends InputMethodService
 //AEIOU KEYBOARD
     @Override
     public View onCreateInputView() {
-        kv = (KeyboardView) getLayoutInflater().inflate(R.layout.keyboard, null);
+        customeKeyboardView = (CustomeKeyboardView) getLayoutInflater().inflate(R.layout.keyboard, null);
         keyboard = new Keyboard(this, R.xml.qwerty_vertical, R.integer.keyboard_normal);
         try {
         if (screenOrentaion() == Configuration.ORIENTATION_PORTRAIT) {
@@ -46,16 +48,16 @@ public class SimpleIME extends InputMethodService
             keyboard = new Keyboard(this, R.xml.qwerty_horizontal, R.integer.keyboard_normal);
         }
 
-            kv.setKeyboard(keyboard);
+            customeKeyboardView.setKeyboard(keyboard);
 
-            kv.setOnKeyboardActionListener(this);
+            customeKeyboardView.setOnKeyboardActionListener(this);
 
         } catch (Exception e) {
             e.printStackTrace();
         }
         showKeyBoard();
         keyboardShift();
-        return kv;
+        return customeKeyboardView;
     }
 
 
@@ -100,7 +102,7 @@ public class SimpleIME extends InputMethodService
                 }
                 break;
             case Keyboard.KEYCODE_MODE_CHANGE:
-                keyboard = kv.getKeyboard();
+                keyboard = customeKeyboardView.getKeyboard();
                keyCodeModeChange(keyboard);
                 break;
 
@@ -234,8 +236,8 @@ public class SimpleIME extends InputMethodService
         try {
             caps = !caps;
             keyboard.setShifted(caps);
-            kv.invalidateAllKeys();
-            setKeboradViewOnChange(caps, kv);
+            customeKeyboardView.invalidateAllKeys();
+            setKeboradViewOnChange(caps, customeKeyboardView);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -396,18 +398,18 @@ public class SimpleIME extends InputMethodService
                     isModeChanged = true;
                     mHasFirstEmptyWithModeChange = true;
                     if (mSymbolsShiftedKeyboard == null) {
-                        setKeboradViewOnChange(caps, kv);
+                        setKeboradViewOnChange(caps, customeKeyboardView);
                     }
                     mKeyboardState = R.integer.keyboard_symbol;
 
                 } else {
                     if (mNonSymbolsKeyboard == null) {
                         isModeChanged = false;
-                        setKeboradViewOnChange(caps, kv);
+                        setKeboradViewOnChange(caps, customeKeyboardView);
                     }
                     mKeyboardState = R.integer.keyboard_normal;
 
-                    kv.setShifted(false);
+                    customeKeyboardView.setShifted(false);
 
                 }
             }
