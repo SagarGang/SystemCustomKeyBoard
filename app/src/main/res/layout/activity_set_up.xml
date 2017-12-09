@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rahulk.simplycustomkeyboard.SetUpActivity">
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_enable_keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_set_default"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/margin_8dp"
+        android:layout_marginRight="@dimen/margin_8dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/first_enable"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_sise_14"
+        android:textStyle="normal" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_set_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/margin_8dp"
+        android:layout_marginRight="@dimen/margin_8dp"
+        android:layout_marginTop="@dimen/margin_16dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/default_keyboard"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_sise_14"
+        android:textStyle="normal" />
+
+
+</RelativeLayout>
+
+
+
+

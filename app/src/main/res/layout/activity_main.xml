@@ -4,6 +4,29 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:orientation="vertical"
     tools:context="com.example.rahulk.simplycustomkeyboard.MainActivity">
+
+
+
+   <android.support.v7.widget.AppCompatTextView
+       android:text="@string/thank_you_for_using_our_aeiou_keyboard"
+       android:layout_centerInParent="true"
+       android:layout_above="@+id/btn_set_up"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content" />
+
+
+   <android.support.v7.widget.AppCompatButton
+       android:id="@+id/btn_set_up"
+       android:layout_margin="@dimen/margin_16dp"
+       android:layout_centerInParent="true"
+       android:textSize="@dimen/text_sise_16"
+       android:textStyle="bold"
+       android:textColor="@android:color/white"
+       android:background="@color/colorPrimary"
+       android:text="@string/setup_your_aeiou_keyboard"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content" />
+
    </RelativeLayout>

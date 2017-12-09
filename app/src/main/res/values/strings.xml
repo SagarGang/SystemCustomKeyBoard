@@ -2,4 +2,10 @@
     <string name="app_name">AEIOU Keyboard \u2122</string>
     <string name="simple_ime">Simple IME</string>
     <string name="subtype_en_US">English (US)</string>
+    <string name="setup_your_aeiou_keyboard">Setup your AEIOU Keyboard \u2122</string>
+    <string name="thank_you_for_using_our_aeiou_keyboard">Thank you for using our AEIOU Keyboard \u2122</string>
+
+
+    <string name="default_keyboard">NOW SET AS DEFAULT KEYBOARD</string>
+    <string name="first_enable">FIRST ENABLE THE AEIOU KEYBOARD \u2122 BY \n SELECTING ON THE FOLLOWING PAGE</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.example.rahulk.simplycustomkeyboard;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -31,7 +32,7 @@ public class CustomeKeyboardView extends KeyboardView {
     public void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-        Paint paint = new Paint();
+        @SuppressLint("DrawAllocation") Paint paint = new Paint();
         paint.setTextAlign(Paint.Align.CENTER);
         paint.setTextSize(68);
         List<Keyboard.Key> keys = getKeyboard().getKeys();
@@ -40,7 +41,7 @@ public class CustomeKeyboardView extends KeyboardView {
             if (key.codes[0]!= -4 && key.codes[0] != 12 && key.codes[0] != 32 && key.codes[0] != 40 && key.codes[0] != -5) {
                 if (key.icon != null) {
 
-                    key.icon.setBounds(key.x, key.y + 5, key.x + key.width, key.y + key.height + 5);
+                    key.icon.setBounds(key.x, key.y + 5, key.x + key.width, key.y + key.height + 3);
                     key.icon.draw(canvas);
                 }
             }
