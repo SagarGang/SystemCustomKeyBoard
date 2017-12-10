@@ -96,8 +96,8 @@
         <Key
             android:codes="-1"
             android:isSticky="true"
+            android:keyWidth="15%p"
             android:keyEdgeFlags="left"
-            android:horizontalGap="5%p"
             android:keyIcon="@drawable/icon_caps_on"
              />
 
@@ -125,6 +125,7 @@
         <Key
             android:codes="-5"
             android:keyEdgeFlags="right"
+            android:keyWidth="15%p"
             android:keyIcon="@drawable/icon_delete"
              />
     </Row>
@@ -228,6 +229,7 @@
             android:keyLabel=")" />
         <Key
             android:codes="-5"
+            android:keyWidth="15%p"
             android:keyEdgeFlags="right"
             android:keyIcon="@drawable/icon_delete"
              />

@@ -94,7 +94,7 @@
         android:keyboardMode="@integer/keyboard_normal">
         <Key
             android:codes="-1"
-            android:horizontalGap="5%p"
+            android:keyWidth="15%p"
             android:isSticky="true"
             android:keyEdgeFlags="left"
             android:keyIcon="@drawable/icon_caps_off"
@@ -123,6 +123,7 @@
             android:keyIcon="@drawable/ver_z_small" />
         <Key
             android:codes="-5"
+            android:keyWidth="15%p"
             android:keyEdgeFlags="right"
             android:keyIcon="@drawable/icon_delete"
              />
@@ -226,6 +227,7 @@
         <Key
             android:codes="-5"
             android:keyEdgeFlags="right"
+            android:keyWidth="15%p"
             android:keyIcon="@drawable/icon_delete"
              />
     </Row>

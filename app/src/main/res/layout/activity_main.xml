@@ -12,6 +12,19 @@
    <android.support.v7.widget.AppCompatTextView
        android:text="@string/thank_you_for_using_our_aeiou_keyboard"
        android:layout_centerInParent="true"
+       android:textColor="@android:color/black"
+       android:layout_above="@+id/tv_thank_you"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content" />
+
+   <android.support.v7.widget.AppCompatTextView
+       android:id="@+id/tv_thank_you"
+       android:layout_alignParentRight="true"
+       android:text="- The development team"
+       android:padding="@dimen/margin_8dp"
+       android:layout_marginRight="48dp"
+       android:layout_centerInParent="true"
+       android:textColor="@android:color/black"
        android:layout_above="@+id/btn_set_up"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content" />
@@ -29,4 +42,28 @@
        android:layout_width="match_parent"
        android:layout_height="wrap_content" />
 
-   </RelativeLayout>
+   <android.support.v7.widget.AppCompatTextView
+       android:id="@+id/tv_feedback"
+       android:text="Give us your likes, dislikes, comments."
+       android:padding="@dimen/margin_8dp"
+       android:layout_marginRight="48dp"
+       android:layout_centerInParent="true"
+       android:textColor="@android:color/black"
+       android:layout_below="@+id/btn_set_up"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content" />
+
+   <android.support.v7.widget.AppCompatTextView
+       android:id="@+id/tv_email"
+       android:text="development@aeioukeyboard.com"
+       android:padding="@dimen/margin_8dp"
+       android:layout_marginRight="48dp"
+       android:autoLink="email"
+       android:layout_centerInParent="true"
+       android:textColor="@color/email_color"
+       android:layout_below="@+id/tv_feedback"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content" />
+
+
+</RelativeLayout>

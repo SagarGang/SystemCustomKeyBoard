@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void startActivitySetUp() {
         startActivity(new Intent(MainActivity.this, SetUpActivity.class));
-        this.finish();
+
 
     }
 }

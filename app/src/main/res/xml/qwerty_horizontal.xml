@@ -96,7 +96,7 @@
         <Key
             android:codes="-1"
             android:isSticky="true"
-            android:horizontalGap="5%p"
+            android:keyWidth="15%p"
             android:keyEdgeFlags="left"
             android:keyIcon="@drawable/icon_caps_off"
              />
@@ -124,6 +124,7 @@
             android:keyIcon="@drawable/hor_z_small" />
         <Key
             android:codes="-5"
+            android:keyWidth="15%p"
             android:keyEdgeFlags="right"
             android:keyIcon="@drawable/icon_delete"
              />
@@ -226,6 +227,7 @@
             android:keyLabel=")" />
         <Key
             android:codes="-5"
+            android:keyWidth="15%p"
             android:keyEdgeFlags="right"
             android:keyIcon="@drawable/icon_delete"
              />
