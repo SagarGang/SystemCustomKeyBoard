@@ -17,13 +17,14 @@
 */
 -->
 <Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
-
     android:keyHeight="@dimen/key_height">
     <Row android:keyboardMode="@integer/keyboard_normal">
         <Key
             android:codes="97"
             android:keyEdgeFlags="left"
-            android:keyIcon="@drawable/alpha_cap_a_vertical" />
+            android:keyIcon="@drawable/ver_caps_a"
+             />
+        <!--android:keyIcon="@drawable/alpha_cap_a_vertical"-->
         <Key
             android:codes="101"
             android:keyIcon="@drawable/alpha_cap_e_vertical" />

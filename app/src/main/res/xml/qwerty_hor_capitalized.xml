@@ -23,7 +23,9 @@
         <Key
             android:codes="97"
             android:keyEdgeFlags="left"
-            android:keyIcon="@drawable/alpha_cap_a_horizontal" />
+            android:keyIcon="@drawable/hor_caps_a"
+             />
+        <!--android:keyIcon="@drawable/alpha_cap_a_horizontal"-->
         <Key
             android:codes="101"
             android:keyIcon="@drawable/alpha_cap_e_horizontal" />

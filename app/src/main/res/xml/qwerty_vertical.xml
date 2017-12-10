@@ -22,7 +22,9 @@
         <Key
             android:codes="97"
             android:keyEdgeFlags="left"
-            android:keyIcon="@drawable/alpha_a_vertical" />
+            android:keyIcon="@drawable/ver_small_a"
+             />
+        <!--android:keyIcon="@drawable/alpha_a_vertical"-->
         <Key
             android:codes="101"
             android:keyIcon="@drawable/alpha_e_vertical" />
