@@ -23,36 +23,39 @@
         <Key
             android:codes="97"
             android:keyEdgeFlags="left"
-            android:keyIcon="@drawable/hor_small_a"
+            android:keyIcon="@drawable/hor_a_small"
              />
         <!--android:keyIcon="@drawable/alpha_a_horizontal"-->
         <Key
             android:codes="101"
-            android:keyIcon="@drawable/alpha_e_horizontal" />
+            android:keyIcon="@drawable/hor_e_small" />
         <Key
+            android:keyIcon="@drawable/hor_b_small"
             android:codes="98"
-            android:keyIcon="@drawable/alpha_b_horizontal" />
+             />
+        <!--android:keyIcon="@drawable/alpha_b_horizontal"-->
+
         <Key
             android:codes="102"
-            android:keyIcon="@drawable/alpha_f_horizontal" />
+            android:keyIcon="@drawable/hor_f_small" />
         <Key
             android:codes="103"
-            android:keyIcon="@drawable/alpha_g_horizontal" />
+            android:keyIcon="@drawable/hor_g_small" />
         <Key
             android:codes="108"
-            android:keyIcon="@drawable/alpha_l_horizontal" />
+            android:keyIcon="@drawable/hor_l_small" />
         <Key
             android:codes="109"
-            android:keyIcon="@drawable/alpha_m_horizontal" />
+            android:keyIcon="@drawable/hor_m_small" />
         <Key
             android:codes="114"
-            android:keyIcon="@drawable/alpha_r_horizontal" />
+            android:keyIcon="@drawable/hor_r_small" />
         <Key
             android:codes="118"
-            android:keyIcon="@drawable/alpha_v_horizontal" />
+            android:keyIcon="@drawable/hor_v_small" />
         <Key
             android:codes="119"
-            android:keyIcon="@drawable/alpha_w_horizontal" />
+            android:keyIcon="@drawable/hor_w_small" />
     </Row>
 
     <Row android:keyboardMode="@integer/keyboard_normal">
@@ -60,31 +63,31 @@
             android:codes="105"
             android:horizontalGap="5%"
             android:keyEdgeFlags="left"
-            android:keyIcon="@drawable/alpha_i_horizontal" />
+            android:keyIcon="@drawable/hor_i_small" />
         <Key
             android:codes="111"
-            android:keyIcon="@drawable/alpha_o_horizontal" />
+            android:keyIcon="@drawable/hor_o_small" />
         <Key
             android:codes="99"
-            android:keyIcon="@drawable/alpha_c_horizontal" />
+            android:keyIcon="@drawable/hor_c_small" />
         <Key
             android:codes="104"
-            android:keyIcon="@drawable/alpha_h_horizontal" />
+            android:keyIcon="@drawable/hor_h_small" />
         <Key
             android:codes="110"
-            android:keyIcon="@drawable/alpha_n_horizontal" />
+            android:keyIcon="@drawable/hor_n_small" />
         <Key
             android:codes="112"
-            android:keyIcon="@drawable/alpha_p_horizontal" />
+            android:keyIcon="@drawable/hor_p_small" />
         <Key
             android:codes="115"
-            android:keyIcon="@drawable/alpha_s_horizontal" />
+            android:keyIcon="@drawable/hor_s_small" />
         <Key
             android:codes="120"
-            android:keyIcon="@drawable/alpha_x_horizontal" />
+            android:keyIcon="@drawable/hor_x_small" />
         <Key
             android:codes="121"
-            android:keyIcon="@drawable/alpha_y_horizontal" />
+            android:keyIcon="@drawable/hor_y_small" />
     </Row>
 
     <Row
@@ -93,37 +96,37 @@
         <Key
             android:codes="-1"
             android:isSticky="true"
+            android:horizontalGap="5%p"
             android:keyEdgeFlags="left"
-            android:horizontalGap="2%"
-            android:keyIcon="@drawable/capsoff_icon"
-            android:keyWidth="12%p" />
+            android:keyIcon="@drawable/icon_caps_off"
+             />
 
         <Key
             android:codes="117"
-            android:keyIcon="@drawable/alpha_u_horizontal" />
+            android:keyIcon="@drawable/hor_u_small" />
         <Key
             android:codes="100"
-            android:keyIcon="@drawable/alpha_d_horizontal" />
+            android:keyIcon="@drawable/hor_d_small" />
         <Key
             android:codes="106"
-            android:keyIcon="@drawable/alpha_j_horizontal" />
+            android:keyIcon="@drawable/hor_j_small" />
         <Key
             android:codes="107"
-            android:keyIcon="@drawable/alpha_k_horizontal" />
+            android:keyIcon="@drawable/hor_k_small" />
         <Key
             android:codes="113"
-            android:keyIcon="@drawable/alpha_q_horizontal" />
+            android:keyIcon="@drawable/hor_q_small" />
         <Key
             android:codes="116"
-            android:keyIcon="@drawable/alpha_t_horizontal" />
+            android:keyIcon="@drawable/hor_t_small" />
         <Key
             android:codes="122"
-            android:keyIcon="@drawable/alpha_z_horizontal" />
+            android:keyIcon="@drawable/hor_z_small" />
         <Key
             android:codes="-5"
             android:keyEdgeFlags="right"
-            android:keyIcon="@drawable/sym_keyboard_delete"
-            android:keyWidth="12%p" />
+            android:keyIcon="@drawable/icon_delete"
+             />
     </Row>
     <Row android:keyboardMode="@integer/keyboard_symbol">
         <Key
@@ -195,7 +198,7 @@
 
         <Key
             android:codes="36"
-            android:horizontalGap="1%p"
+            android:horizontalGap="5%p"
             android:keyEdgeFlags="left"
             android:keyLabel="$" />
         <Key
@@ -224,8 +227,8 @@
         <Key
             android:codes="-5"
             android:keyEdgeFlags="right"
-            android:keyIcon="@drawable/sym_keyboard_delete"
-            android:keyWidth="12%p" />
+            android:keyIcon="@drawable/icon_delete"
+             />
     </Row>
 
 
@@ -235,7 +238,7 @@
 
         <Key
             android:codes="12"
-            android:keyIcon="@drawable/icons8globe"
+            android:keyIcon="@drawable/icon_choose_keyboard"
             android:keyWidth="15%p" />
         <Key
             android:codes="-2"
@@ -248,7 +251,7 @@
         -->
         <Key
             android:codes="32"
-            android:keyIcon="@drawable/sym_keyboard_space_holo_dark"
+            android:keyIcon="@drawable/icon_space_bar"
             android:keyWidth="30%p" />
         <Key
             android:codes="46"
@@ -260,7 +263,7 @@
             android:keyWidth="10%p" />
         <Key
             android:codes="-4"
-            android:keyIcon="@drawable/sym_keyboard_feedback_return"
+            android:keyIcon="@drawable/icon_return"
             android:keyWidth="20%p" />
     </Row>
     <Row
@@ -268,7 +271,7 @@
         android:rowEdgeFlags="bottom">
         <Key
             android:codes="12"
-            android:keyIcon="@drawable/icons8globe"
+            android:keyIcon="@drawable/icon_choose_keyboard"
             android:keyWidth="15%p" />
         <Key
             android:codes="-2"
@@ -282,7 +285,7 @@
         -->
         <Key
             android:codes="32"
-            android:keyIcon="@drawable/sym_keyboard_space_holo_dark"
+            android:keyIcon="@drawable/icon_space_bar"
             android:keyWidth="30%p" />
         <Key
             android:codes="46"
@@ -294,7 +297,7 @@
             android:keyWidth="10%p" />
         <Key
             android:codes="-4"
-            android:keyIcon="@drawable/sym_keyboard_feedback_return"
+            android:keyIcon="@drawable/icon_return"
             android:keyWidth="20%p" />
 
     </Row>

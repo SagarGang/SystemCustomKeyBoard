@@ -23,36 +23,39 @@
         <Key
             android:codes="97"
             android:keyEdgeFlags="left"
-            android:keyIcon="@drawable/hor_caps_a"
+            android:keyIcon="@drawable/hor_a_caps"
              />
         <!--android:keyIcon="@drawable/alpha_cap_a_horizontal"-->
         <Key
             android:codes="101"
-            android:keyIcon="@drawable/alpha_cap_e_horizontal" />
+            android:keyIcon="@drawable/hor_e_caps" />
         <Key
             android:codes="98"
-            android:keyIcon="@drawable/alpha_cap_b_horizontal" />
+            android:keyIcon="@drawable/hor_caps_b"
+             />
+        <!--android:keyIcon="@drawable/alpha_cap_b_horizontal"-->
+
         <Key
             android:codes="102"
-            android:keyIcon="@drawable/alpha_cap_f_horizontal" />
+            android:keyIcon="@drawable/hor_f_caps" />
         <Key
             android:codes="103"
-            android:keyIcon="@drawable/alpha_cap_g_horizontal" />
+            android:keyIcon="@drawable/hor_g_caps" />
         <Key
             android:codes="108"
-            android:keyIcon="@drawable/alpha_cap_l_horizontal" />
+            android:keyIcon="@drawable/hor_l_caps" />
         <Key
             android:codes="109"
-            android:keyIcon="@drawable/alpha_cap_m_horizontal" />
+            android:keyIcon="@drawable/hor_m_caps" />
         <Key
             android:codes="114"
-            android:keyIcon="@drawable/alpha_cap_r_horizontal" />
+            android:keyIcon="@drawable/hor_r_caps" />
         <Key
             android:codes="118"
-            android:keyIcon="@drawable/alpha_cap_v_horizontal" />
+            android:keyIcon="@drawable/hor_v_caps" />
         <Key
             android:codes="119"
-            android:keyIcon="@drawable/alpha_cap_w_horizontal" />
+            android:keyIcon="@drawable/hor_w_caps" />
     </Row>
 
     <Row android:keyboardMode="@integer/keyboard_normal">
@@ -60,31 +63,31 @@
             android:codes="105"
             android:horizontalGap="5%"
             android:keyEdgeFlags="left"
-            android:keyIcon="@drawable/alpha_cap_i_horizontal" />
+            android:keyIcon="@drawable/hor_i_caps" />
         <Key
             android:codes="111"
-            android:keyIcon="@drawable/alpha_cap_o_horizontal" />
+            android:keyIcon="@drawable/hor_o_caps" />
         <Key
             android:codes="99"
-            android:keyIcon="@drawable/alpha_cap_c_horizontal" />
+            android:keyIcon="@drawable/hor_c_caps" />
         <Key
             android:codes="104"
-            android:keyIcon="@drawable/alpha_cap_h_horizontal" />
+            android:keyIcon="@drawable/hor_h_caps" />
         <Key
             android:codes="110"
-            android:keyIcon="@drawable/alpha_cap_n_horizontal" />
+            android:keyIcon="@drawable/hor_n_caps" />
         <Key
             android:codes="112"
-            android:keyIcon="@drawable/alpha_cap_p_horizontal" />
+            android:keyIcon="@drawable/hor_p_caps" />
         <Key
             android:codes="115"
-            android:keyIcon="@drawable/alpha_cap_s_horizontal" />
+            android:keyIcon="@drawable/hor_s_caps" />
         <Key
             android:codes="120"
-            android:keyIcon="@drawable/alpha_cap_x_horizontal" />
+            android:keyIcon="@drawable/hor_x_caps" />
         <Key
             android:codes="121"
-            android:keyIcon="@drawable/alpha_cap_y_horizontal" />
+            android:keyIcon="@drawable/hor_y_caps" />
     </Row>
 
     <Row
@@ -92,38 +95,38 @@
         android:keyboardMode="@integer/keyboard_normal">
         <Key
             android:codes="-1"
+            android:horizontalGap="5%p"
             android:isSticky="true"
-            android:horizontalGap="2%"
             android:keyEdgeFlags="left"
-            android:keyIcon="@drawable/capson_icon"
-            android:keyWidth="12%p" />
+            android:keyIcon="@drawable/icon_caps_on"
+             />
 
         <Key
             android:codes="117"
-            android:keyIcon="@drawable/alpha_cap_u_horizontal" />
+            android:keyIcon="@drawable/hor_u_caps" />
         <Key
             android:codes="100"
-            android:keyIcon="@drawable/alpha_cap_d_horizontal" />
+            android:keyIcon="@drawable/hor_d_caps" />
         <Key
             android:codes="106"
-            android:keyIcon="@drawable/alpha_cap_j_horizontal" />
+            android:keyIcon="@drawable/hor_j_caps" />
         <Key
             android:codes="107"
-            android:keyIcon="@drawable/alpha_cap_k_horizontal" />
+            android:keyIcon="@drawable/hor_k_caps" />
         <Key
             android:codes="113"
-            android:keyIcon="@drawable/alpha_cap_q_horizontal" />
+            android:keyIcon="@drawable/hor_q_caps" />
         <Key
             android:codes="116"
-            android:keyIcon="@drawable/alpha_cap_t_horizontal" />
+            android:keyIcon="@drawable/hor_t_caps" />
         <Key
             android:codes="122"
-            android:keyIcon="@drawable/alpha_cap_z_horizontal" />
+            android:keyIcon="@drawable/hor_z_caps" />
         <Key
             android:codes="-5"
             android:keyEdgeFlags="right"
-            android:keyIcon="@drawable/sym_keyboard_delete"
-            android:keyWidth="12%p" />
+            android:keyIcon="@drawable/icon_delete"
+             />
     </Row>
     <Row android:keyboardMode="@integer/keyboard_symbol">
         <Key
@@ -197,7 +200,7 @@
 
         <Key
             android:codes="36"
-            android:horizontalGap="1%p"
+            android:horizontalGap="5%p"
             android:keyEdgeFlags="left"
             android:keyLabel="$" />
         <Key
@@ -225,8 +228,8 @@
         <Key
             android:codes="-5"
             android:keyEdgeFlags="right"
-            android:keyIcon="@drawable/sym_keyboard_delete"
-            android:keyWidth="12%p" />
+            android:keyIcon="@drawable/icon_delete"
+             />
     </Row>
 
 
@@ -236,7 +239,7 @@
 
         <Key
             android:codes="12"
-            android:keyIcon="@drawable/icons8globe"
+            android:keyIcon="@drawable/icon_choose_keyboard"
             android:keyWidth="15%p" />
         <Key
             android:codes="-2"
@@ -250,7 +253,7 @@
 
         <Key
             android:codes="32"
-            android:keyIcon="@drawable/sym_keyboard_space_holo_dark"
+            android:keyIcon="@drawable/icon_space_bar"
             android:keyWidth="30%p" />
         <Key
             android:codes="46"
@@ -262,7 +265,7 @@
             android:keyWidth="10%p" />
         <Key
             android:codes="-4"
-            android:keyIcon="@drawable/sym_keyboard_feedback_return"
+            android:keyIcon="@drawable/icon_return"
             android:keyWidth="20%p" />
     </Row>
     <Row
@@ -270,7 +273,7 @@
         android:rowEdgeFlags="bottom">
         <Key
             android:codes="12"
-            android:keyIcon="@drawable/icons8globe"
+            android:keyIcon="@drawable/icon_choose_keyboard"
             android:keyWidth="15%p" />
         <Key
             android:codes="-2"
@@ -284,7 +287,7 @@
         -->
         <Key
             android:codes="32"
-            android:keyIcon="@drawable/sym_keyboard_space_holo_dark"
+            android:keyIcon="@drawable/icon_space_bar"
             android:keyWidth="30%p" />
         <Key
             android:codes="46"
@@ -296,7 +299,7 @@
             android:keyWidth="10%p" />
         <Key
             android:codes="-4"
-            android:keyIcon="@drawable/sym_keyboard_feedback_return"
+            android:keyIcon="@drawable/icon_return"
             android:keyWidth="20%p" />
 
     </Row>
