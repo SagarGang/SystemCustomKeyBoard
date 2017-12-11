@@ -61,7 +61,7 @@
     <Row android:keyboardMode="@integer/keyboard_normal">
         <Key
             android:codes="105"
-            android:horizontalGap="5%"
+            android:horizontalGap="5%p"
             android:keyEdgeFlags="left"
             android:keyIcon="@drawable/hor_i_small" />
         <Key

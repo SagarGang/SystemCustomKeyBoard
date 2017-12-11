@@ -31,7 +31,7 @@
             android:keyIcon="@drawable/hor_e_caps" />
         <Key
             android:codes="98"
-            android:keyIcon="@drawable/hor_caps_b"
+            android:keyIcon="@drawable/hor_b_caps"
              />
         <!--android:keyIcon="@drawable/alpha_cap_b_horizontal"-->
 
@@ -61,7 +61,7 @@
     <Row android:keyboardMode="@integer/keyboard_normal">
         <Key
             android:codes="105"
-            android:horizontalGap="2%p"
+            android:horizontalGap="5%p"
             android:keyEdgeFlags="left"
             android:keyIcon="@drawable/hor_i_caps" />
         <Key

@@ -10,6 +10,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.ExtractedTextRequest;
 import android.view.inputmethod.InputConnection;
 import android.view.inputmethod.InputMethodManager;
@@ -70,9 +71,29 @@ public class SimpleIME extends InputMethodService
         switch (primaryCode) {
 
             case Keyboard.KEYCODE_DONE:
-                try {
-                    ic.sendKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_ENTER));
 
+                final int options = this.getCurrentInputEditorInfo().imeOptions;
+                final int actionId = options & EditorInfo.IME_MASK_ACTION;
+                switch (actionId) {
+                    case EditorInfo.IME_ACTION_SEARCH:
+                        sendDefaultEditorAction(true);
+                        break;
+                    case EditorInfo.IME_ACTION_GO:
+                        sendDefaultEditorAction(true);
+                        break;
+                    case EditorInfo.IME_ACTION_SEND:
+                        sendDefaultEditorAction(true);
+                        break;
+
+                }
+
+                ic.sendKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_ENTER));
+
+                break;
+
+
+
+/*
                     if (!shiftOn) {
                         keyboardShift();
                         capsLetterEnter = true;
@@ -82,7 +103,7 @@ public class SimpleIME extends InputMethodService
                     e.printStackTrace();
                 }
 
-                break;
+                break;*/
 
             case Keyboard.KEYCODE_SHIFT:
                 try {
