@@ -58,6 +58,9 @@ public class SimpleIME extends InputMethodService
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+//        kv.setPreviewEnabled(false);
+
         showKeyBoard();
         keyboardShift();
         return kv;
@@ -116,6 +119,7 @@ public class SimpleIME extends InputMethodService
                         break;
                     case EditorInfo.IME_ACTION_SEND:
                         sendDefaultEditorAction(true);
+                        setKeboradViewOnChange(true,kv);
                         break;
 
                 }

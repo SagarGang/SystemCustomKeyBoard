@@ -125,7 +125,6 @@
         <Key
             android:codes="-5"
             android:keyWidth="15%p"
-            android:isRepeatable="true"
             android:keyEdgeFlags="right"
             android:keyIcon="@drawable/icon_delete"
              />
