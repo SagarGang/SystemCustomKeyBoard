@@ -27,120 +27,68 @@ import static com.example.rahulk.simplycustomkeyboard.AppConstants.shiftOn;
 public class SimpleIME extends InputMethodService
         implements KeyboardView.OnKeyboardActionListener {
 
-     KeyboardView kv;
-//    CustomeKeyboardView customeKeyboardView;
-
+    private KeyboardView keyboardView;
     private Keyboard keyboard, mNonSymbolsKeyboard, mSymbolsShiftedKeyboard;
     int mKeyboardState = R.integer.keyboard_normal;
     int shiftDelCount = 0;
     private boolean caps = false;
     CharSequence currentText = "", beforeDelText = "";
-    InputConnection ic = null;
-//AEIOU KEYBOARD
+    InputConnection inputConnection = null;
+
     @Override
     public View onCreateInputView() {
 
-
-        kv = (KeyboardView) getLayoutInflater().inflate(R.layout.keyboard,null );
+        keyboardView = (KeyboardView) getLayoutInflater().inflate(R.layout.keyboard, null);
         keyboard = new Keyboard(this, R.xml.qwerty_ver_capitalized, R.integer.keyboard_normal);
         try {
-        if (screenOrentaion() == Configuration.ORIENTATION_PORTRAIT ) {
-            keyboard = new Keyboard(this, R.xml.qwerty_ver_capitalized, R.integer.keyboard_normal);
+            if (screenOrentaion() == Configuration.ORIENTATION_PORTRAIT) {
+                keyboard = new Keyboard(this, R.xml.qwerty_ver_capitalized, R.integer.keyboard_normal);
 
-        } else {
-            keyboard = new Keyboard(this, R.xml.qwerty_hor_capitalized, R.integer.keyboard_normal);
-        }
-
-            kv.setKeyboard(keyboard);
-
-            kv.setOnKeyboardActionListener(this);
+            } else {
+                keyboard = new Keyboard(this, R.xml.qwerty_hor_capitalized, R.integer.keyboard_normal);
+            }
+            keyboardView.setKeyboard(keyboard);
+            keyboardView.setOnKeyboardActionListener(this);
 
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-//        kv.setPreviewEnabled(false);
-
         showKeyBoard();
-        keyboardShift();
-        return kv;
-    }
-
-
-
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-       /* if (newConfig.hardKeyboardHidden == Configuration.HARDKEYBOARDHIDDEN_YES) {
-            Log.e("SimpleIME","KEYBOARD VISIBLE");
-            keyboardShift();
-        } else if (newConfig.hardKeyboardHidden == Configuration.HARDKEYBOARDHIDDEN_NO) {
-            Log.e("SimpleIME","KEYBOARD HIDE");
-            keyboardShift();
-        }
-
-
-*/
-
-    /*   if (currentText.toString().length()>0)
-       {
-           caps = false;
-           setKeboradViewOnChange(false,kv);
-       }
-       else
-       {
-           caps = true;
-           setKeboradViewOnChange(true,kv);
-       }*/
-
-
-
+//        keyboardShift();
+        return keyboardView;
     }
 
 
     @Override
     public void onKey(int primaryCode, int[] keyCodes) {
-        ic = getCurrentInputConnection();
+        inputConnection = getCurrentInputConnection();
         char code = (char) primaryCode;
-        playClick(primaryCode);
-        beforeDelText = ic.getExtractedText(new ExtractedTextRequest(), 0).text;
+//        playClick(primaryCode);
+        beforeDelText = inputConnection.getExtractedText(new ExtractedTextRequest(), 0).text;
         switch (primaryCode) {
 
             case Keyboard.KEYCODE_DONE:
-
                 final int options = this.getCurrentInputEditorInfo().imeOptions;
                 final int actionId = options & EditorInfo.IME_MASK_ACTION;
                 switch (actionId) {
                     case EditorInfo.IME_ACTION_SEARCH:
                         sendDefaultEditorAction(true);
+
                         break;
                     case EditorInfo.IME_ACTION_GO:
                         sendDefaultEditorAction(true);
                         break;
                     case EditorInfo.IME_ACTION_SEND:
                         sendDefaultEditorAction(true);
-                        setKeboradViewOnChange(true,kv);
+                        caps = true;
+                        setKeboradViewOnChange(true, keyboardView);
                         break;
 
                 }
 
-                ic.sendKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_ENTER));
-
+                inputConnection.sendKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_ENTER));
                 break;
-
-
-
-/*
-                    if (!shiftOn) {
-                        keyboardShift();
-                        capsLetterEnter = true;
-                        break;
-                    }
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-
-                break;*/
 
             case Keyboard.KEYCODE_SHIFT:
                 try {
@@ -160,8 +108,8 @@ public class SimpleIME extends InputMethodService
                 }
                 break;
             case Keyboard.KEYCODE_MODE_CHANGE:
-                keyboard = kv.getKeyboard();
-               keyCodeModeChange(keyboard);
+                keyboard = keyboardView.getKeyboard();
+                keyCodeModeChange(keyboard);
                 break;
 
             case 12:
@@ -179,14 +127,33 @@ public class SimpleIME extends InputMethodService
 
             case Keyboard.KEYCODE_DELETE:
                 try {
-                    beforeDelText = ic.getTextBeforeCursor(currentText.length(), 0);
-                    ic.deleteSurroundingText(1, 0);
-                    currentText = ic.getExtractedText(new ExtractedTextRequest(), 0).text;
-                    myLoop:
-                    if (!TextUtils.isEmpty(beforeDelText)) {
-                        onKeyDel();
-                        break myLoop;
+                    beforeDelText = inputConnection.getTextBeforeCursor(currentText.length(), 0);
+                    inputConnection.deleteSurroundingText(1, 0);
+                    currentText = inputConnection.getExtractedText(new ExtractedTextRequest(), 0).text;
+                    if (currentText.toString().length() != 0 && ".".equalsIgnoreCase(currentText.toString().substring(currentText.length() - 1))) {
+                        caps = false;
+                        setKeboradViewOnChange(false, keyboardView);
                     }
+                    else
+                    {
+
+                   /* myLoop:*/
+                        if (!TextUtils.isEmpty(beforeDelText)) {
+                            onKeyDel();
+//                        break myLoop;
+                        }
+                    }
+
+                        if (caps) {
+                            caps = false;
+                            setKeboradViewOnChange(false, keyboardView);
+                        }
+
+                    if (currentText.toString().isEmpty()) {
+                        caps = true;
+                        setKeboradViewOnChange(true, keyboardView);
+                    }
+
                 } catch (Exception e) {
                     e.printStackTrace();
                 } finally {
@@ -201,9 +168,18 @@ public class SimpleIME extends InputMethodService
                     } else {
                         capsLetterEnter = false;
                     }
-                    ic.commitText(String.valueOf(code), 1);
+                    inputConnection.commitText(String.valueOf(code), 1);
+/*
+                    if (code == 32) {
+                        if (".".equalsIgnoreCase(currentText.toString().substring(currentText.length() - 1))) {
+                            caps = true;
+                            setKeboradViewOnChange(true, keyboardView);
+                        }
 
-                    currentText = ic.getExtractedText(new ExtractedTextRequest(), 0).text;
+                    }
+*/
+
+                    currentText = inputConnection.getExtractedText(new ExtractedTextRequest(), 0).text;
 
                     if (!shiftOn || !mHasDoubleClicked && !isModeChanged) {
                         shiftDelCount = 0;
@@ -279,9 +255,7 @@ public class SimpleIME extends InputMethodService
     }
 
     public int screenOrentaion() {
-        int orientation = this.getResources().getConfiguration().orientation;
-
-        return orientation;
+        return this.getResources().getConfiguration().orientation;
     }
 
 
@@ -295,8 +269,8 @@ public class SimpleIME extends InputMethodService
         try {
             caps = !caps;
             keyboard.setShifted(caps);
-            kv.invalidateAllKeys();
-            setKeboradViewOnChange(caps, kv);
+            keyboardView.invalidateAllKeys();
+            setKeboradViewOnChange(caps, keyboardView);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -357,72 +331,15 @@ public class SimpleIME extends InputMethodService
 
     @Override
     public void onStartInputView(EditorInfo info, boolean restarting) {
-       super.onStartInputView(info, restarting);
+        super.onStartInputView(info, restarting);
 
-        if (currentText.toString().length()>0)
-        {
+        if (currentText.toString().length() > 0) {
             caps = false;
-            setKeboradViewOnChange(false,kv);
-        }
-        else
-        {
+            setKeboradViewOnChange(false, keyboardView);
+        } else {
             caps = true;
-            setKeboradViewOnChange(true,kv);
+            setKeboradViewOnChange(true, keyboardView);
         }
-       /* if (!caps)
-        {
-            caps = true;
-            setKeboradViewOnChange(caps,kv);
-        }
-*/
-/*
-
-       if (screenOrentaion()==Configuration.ORIENTATION_PORTRAIT)
-       {
-           if (caps)
-           {
-               setKeboradViewOnChange(caps,kv);
-           }
-           else
-           {
-               caps = true;
-               setKeboradViewOnChange(caps,kv);
-           }
-       }
-
-        if (screenOrentaion()==Configuration.ORIENTATION_LANDSCAPE)
-        {
-            if (caps)
-            {
-                setKeboradViewOnChange(caps,kv);
-            }
-            else
-            {
-                caps = false;
-                setKeboradViewOnChange(caps,kv);
-            }
-        }
-
-
-*/
-
-        /*if (!caps)
-        {
-            caps = true;
-            setKeboradViewOnChange(caps,kv);
-        }*/
-/*
-        else
-        {
-            setKeboradViewOnChange(caps,kv);
-        }
-*/
-
-
-
-        /*caps = true;
-        setInputView(onCreateInputView());*/
-
 
     }
 
@@ -469,8 +386,6 @@ public class SimpleIME extends InputMethodService
     }
 
 
-
-
     public void setKeboradViewOnChange(boolean flagCaps, KeyboardView kView) {
         try {
             if (!isModeChanged) {
@@ -490,7 +405,6 @@ public class SimpleIME extends InputMethodService
 
                 }
 
-
             } else {
                 if (screenOrentaion() == Configuration.ORIENTATION_PORTRAIT) {
                     keyboard = new Keyboard(this, R.xml.qwerty_vertical, R.integer.keyboard_symbol);
@@ -508,10 +422,10 @@ public class SimpleIME extends InputMethodService
     public void onKeyDel() {
 
         try {
-            myLoop:
+           /* myLoop:*/
             if (beforeDelText.length() >= 1) {
 
-                currentText = ic.getExtractedText(new ExtractedTextRequest(), 0).text;
+                currentText = inputConnection.getExtractedText(new ExtractedTextRequest(), 0).text;
                 if (!shiftOn) {
                     setShiftedKeyoboardOnSpaceAndDot(currentText, false);
                 }
@@ -522,26 +436,25 @@ public class SimpleIME extends InputMethodService
         }
     }
 
-    public void keyCodeModeChange(Keyboard keyboard)
-    {
+    public void keyCodeModeChange(Keyboard keyboard) {
         try {
             if (keyboard != null) {
                 if (mKeyboardState == R.integer.keyboard_normal) {
                     isModeChanged = true;
                     mHasFirstEmptyWithModeChange = true;
                     if (mSymbolsShiftedKeyboard == null) {
-                        setKeboradViewOnChange(caps, kv);
+                        setKeboradViewOnChange(caps, keyboardView);
                     }
                     mKeyboardState = R.integer.keyboard_symbol;
 
                 } else {
                     if (mNonSymbolsKeyboard == null) {
                         isModeChanged = false;
-                        setKeboradViewOnChange(caps, kv);
+                        setKeboradViewOnChange(caps, keyboardView);
                     }
                     mKeyboardState = R.integer.keyboard_normal;
 
-                    kv.setShifted(false);
+                    keyboardView.setShifted(false);
 
                 }
             }

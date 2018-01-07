@@ -198,7 +198,7 @@
     <Row android:keyboardMode="@integer/keyboard_symbol">
         <Key
             android:codes="36"
-            android:horizontalGap="5%p"
+            android:keyWidth="15%p"
             android:keyEdgeFlags="left"
             android:keyLabel="$" />
         <Key
