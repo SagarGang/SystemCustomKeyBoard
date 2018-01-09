@@ -55,7 +55,6 @@ public class SimpleIME extends InputMethodService
         }
 
         showKeyBoard();
-//        keyboardShift();
         return keyboardView;
     }
 
@@ -130,24 +129,59 @@ public class SimpleIME extends InputMethodService
                     beforeDelText = inputConnection.getTextBeforeCursor(currentText.length(), 0);
                     inputConnection.deleteSurroundingText(1, 0);
                     currentText = inputConnection.getExtractedText(new ExtractedTextRequest(), 0).text;
+
+
+                  /*  char upperCh = 0;
+                    if (!beforeDelText.toString().isEmpty() && beforeDelText.toString().contains("\n"))
+                    {
+                        String upperCaseChar = beforeDelText.toString().substring(beforeDelText.toString().lastIndexOf("\n") + 1);
+                         upperCh = upperCaseChar.charAt(0);
+                    }*/
+
+
+
+/*
+
+                    String lowerCaseChar = currentText.toString().substring(currentText.length() - 1);
+
+                    char lowerCh = lowerCaseChar.charAt(0);
+
+*/
+
+                /*    String formatted = currentText.toString().replace("\n", "");
+                    for (int i = 0; i <formatted.length(); i++) {
+                        char ch = formatted.charAt(i);
+
+                        if (Character.isUpperCase(ch)) {
+                            caps = true;
+                            setKeboradViewOnChange(true, keyboardView);
+                            break;
+                        } else if (Character.isLowerCase(ch)) {
+                            caps = false;
+                            setKeboradViewOnChange(false, keyboardView);
+                            break;
+                        }
+                    }*/
                     if (currentText.toString().length() != 0 && ".".equalsIgnoreCase(currentText.toString().substring(currentText.length() - 1))) {
                         caps = false;
                         setKeboradViewOnChange(false, keyboardView);
-                    }
-                    else
-                    {
+                    } else {
 
                    /* myLoop:*/
                         if (!TextUtils.isEmpty(beforeDelText)) {
+
+
                             onKeyDel();
 //                        break myLoop;
                         }
                     }
 
-                        if (caps) {
-                            caps = false;
-                            setKeboradViewOnChange(false, keyboardView);
-                        }
+
+                    if (caps)
+                    {
+                        caps = false;
+                        setKeboradViewOnChange(false, keyboardView);
+                    }
 
                     if (currentText.toString().isEmpty()) {
                         caps = true;
@@ -341,6 +375,13 @@ public class SimpleIME extends InputMethodService
             setKeboradViewOnChange(true, keyboardView);
         }
 
+        if (mKeyboardState != R.integer.keyboard_normal) {
+            isModeChanged = false;
+            keyboard = keyboardView.getKeyboard();
+            keyCodeModeChange(keyboard);
+        }
+
+
     }
 
     public void onDoubleClick() {
@@ -388,6 +429,7 @@ public class SimpleIME extends InputMethodService
 
     public void setKeboradViewOnChange(boolean flagCaps, KeyboardView kView) {
         try {
+
             if (!isModeChanged) {
                 if (screenOrentaion() == Configuration.ORIENTATION_PORTRAIT) {
                     if (flagCaps) {
@@ -425,10 +467,12 @@ public class SimpleIME extends InputMethodService
            /* myLoop:*/
             if (beforeDelText.length() >= 1) {
 
+
                 currentText = inputConnection.getExtractedText(new ExtractedTextRequest(), 0).text;
                 if (!shiftOn) {
                     setShiftedKeyoboardOnSpaceAndDot(currentText, false);
                 }
+
 
             }
         } catch (Exception e) {
