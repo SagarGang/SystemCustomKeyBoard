@@ -3,9 +3,28 @@
     <string name="simple_ime">Simple IME</string>
     <string name="subtype_en_US">English (US)</string>
     <string name="setup_your_aeiou_keyboard">Setup your AEIOU Keyboard \u2122</string>
-    <string name="thank_you_for_using_our_aeiou_keyboard">Thank you for choosing our AEIOU Keyboard \u2122</string>
-
+    <string name="inst_inst">AEIOU Keyboard™ Installation Instructions</string>
+    <string name="setting_page">Go to the Settings Page—Language and Input to activate the AEIOU \nKeyboard™ and choose it as your default keyboard.</string>
+    <!--<string name="thank_you_for_using_our_aeiou_keyboard">Thank you for choosing our AEIOU Keyboard \u2122</string>-->
+    <string name="activate_and_default">
+Put a \u2713 on AEIOU Keyboard™ to activate.
+Click on Default and choose AEIOU Keyboard™.
+Click Return \u23CE on your device to return to this instructions
+page.</string>
 
     <string name="default_keyboard">NOW SET AS DEFAULT KEYBOARD</string>
-    <string name="first_enable">FIRST ENABLE THE AEIOU KEYBOARD \u2122 BY \n SELECTING ON THE FOLLOWING PAGE</string>
+    <string name="first_enable">Please click here to setup</string>
+    <string name="click_here_text">Click here to install the AEIOU Keyboard™. Standard security instructions for installing all apps will appear. Allow the installation on all screens. Check box to install the keyboard. Then press Return on your cell phone or tablet to return to this screen.
+       </string>
+
+    <string name="click_here_text_two"> Click here to set the default keyboard. Select the AEIOU Keyboard™. Press Return on your cell phone or tablet to return to this page.</string>
+    <string name="click_return">Click Return on your cell phone or tablet. On your Apps Screen select your Email or word processing program you wish to use. The AEIOU Keyboard™ will be your keyboard. (To reinstall the QWERTY keyboard press the World Globe key on the AEIOU Keyboard™ to go to the Settings-Language and Input Screen.)</string>
+    <string name="thank_select">Thank you for selecting the AEIOU Keyboard™ Happy typing! The Development Staff.</string>
+    <string name="coply_wright">© 2017 Oxford Institute Press LLC; Patent and Copyright Pending; AEIOU Keyboard™ is a registered U.S. Trademark. The user is granted a royalty free license only for non-commercial private use. Software developers and manufacturers please contact for licensing at</string>
+    <string name="aeiou_email"> www.aeioukeyboard.com</string>
+    <string name="click"><u>CLICK HERE</u></string>
+    <string name="click_exit"><u>CLICK HERE TO EXIT</u></string>
+    <string name="changing_keyboard">Changing keyboards: To reinstall the QWERTY keyboard, press the World Globe key on the AEIOU Keyboard™. \nTo again install the AEIOU Keyboard™ click on the AEIOU app icon to go to the Settings Page.</string>
+    <string name="copy_wright">© 2017 Oxford Institute Press LLC; Patent and Copyright Pending; AEIOU Keyboard™ is a registered U.S. Trademark. The user is granted a royalty free license only for non-commercial private use. Software developers and manufacturers please contact for licensing at <u>www.aeioukeyboard.com.</u></string>
+    <string name="thank">Thank you for selecting the AEIOU Keyboard™.\nThe Development Staff</string>
 </resources>

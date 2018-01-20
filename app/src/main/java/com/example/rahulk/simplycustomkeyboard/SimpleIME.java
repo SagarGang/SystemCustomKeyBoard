@@ -50,9 +50,12 @@ public class SimpleIME extends InputMethodService
             keyboardView.setKeyboard(keyboard);
             keyboardView.setOnKeyboardActionListener(this);
 
+
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        keyboardView.setPreviewEnabled(true);
 
         showKeyBoard();
         return keyboardView;
@@ -107,11 +110,18 @@ public class SimpleIME extends InputMethodService
                 }
                 break;
             case Keyboard.KEYCODE_MODE_CHANGE:
+
                 keyboard = keyboardView.getKeyboard();
                 keyCodeModeChange(keyboard);
+
                 break;
 
             case 12:
+
+                mKeyboardState = R.integer.keyboard_symbol;
+                keyboard = keyboardView.getKeyboard();
+                keyCodeModeChange(keyboard);
+
                 try {
                     InputMethodManager mgr =
                             (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -121,6 +131,9 @@ public class SimpleIME extends InputMethodService
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+
+
+
                 break;
 
 
@@ -177,8 +190,7 @@ public class SimpleIME extends InputMethodService
                     }
 
 
-                    if (caps)
-                    {
+                    if (caps) {
                         caps = false;
                         setKeboradViewOnChange(false, keyboardView);
                     }
@@ -309,7 +321,6 @@ public class SimpleIME extends InputMethodService
             e.printStackTrace();
         }
 
-
     }
 
     public void setShiftedKeyoboardOnSpaceAndDot(CharSequence currentText, boolean capsFlag) {
@@ -367,19 +378,26 @@ public class SimpleIME extends InputMethodService
     public void onStartInputView(EditorInfo info, boolean restarting) {
         super.onStartInputView(info, restarting);
 
-        if (currentText.toString().length() > 0) {
+       /* if (currentText.toString().length() > 0) {
             caps = false;
             setKeboradViewOnChange(false, keyboardView);
         } else {
             caps = true;
             setKeboradViewOnChange(true, keyboardView);
-        }
+        }*/
+
+        caps = true;
+        setKeboradViewOnChange(true, keyboardView);
 
         if (mKeyboardState != R.integer.keyboard_normal) {
             isModeChanged = false;
             keyboard = keyboardView.getKeyboard();
+
             keyCodeModeChange(keyboard);
         }
+
+
+
 
 
     }
