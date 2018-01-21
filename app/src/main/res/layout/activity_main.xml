@@ -86,8 +86,9 @@
             android:layout_height="wrap_content"
             android:padding="@dimen/margin_8dp"
             android:text="@string/copy_wright"
+            android:autoLink="web"
             android:textColor="@android:color/black"
-            android:textSize="@dimen/text_sise_14" />
+            android:textSize="@dimen/text_sise_11" />
 
         <TextView
             android:id="@+id/tv_copy_right"
