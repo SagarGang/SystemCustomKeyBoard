@@ -5,7 +5,6 @@ import android.content.res.Configuration;
 import android.inputmethodservice.InputMethodService;
 import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.KeyboardView;
-import android.media.AudioManager;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -51,6 +50,7 @@ public class SimpleIME extends InputMethodService
             keyboardView.setOnKeyboardActionListener(this);
 
 
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -60,7 +60,6 @@ public class SimpleIME extends InputMethodService
         showKeyBoard();
         return keyboardView;
     }
-
 
     @Override
     public void onKey(int primaryCode, int[] keyCodes) {
@@ -76,12 +75,26 @@ public class SimpleIME extends InputMethodService
                 switch (actionId) {
                     case EditorInfo.IME_ACTION_SEARCH:
                         sendDefaultEditorAction(true);
-
                         break;
+
                     case EditorInfo.IME_ACTION_GO:
                         sendDefaultEditorAction(true);
                         break;
+
+
                     case EditorInfo.IME_ACTION_SEND:
+                        sendDefaultEditorAction(true);
+                        caps = true;
+                        setKeboradViewOnChange(true, keyboardView);
+                        break;
+
+                    case 6:
+                        sendDefaultEditorAction(true);
+                        caps = true;
+                        setKeboradViewOnChange(true, keyboardView);
+                        break;
+
+                    default:
                         sendDefaultEditorAction(true);
                         caps = true;
                         setKeboradViewOnChange(true, keyboardView);
@@ -133,7 +146,6 @@ public class SimpleIME extends InputMethodService
                 }
 
 
-
                 break;
 
 
@@ -143,38 +155,6 @@ public class SimpleIME extends InputMethodService
                     inputConnection.deleteSurroundingText(1, 0);
                     currentText = inputConnection.getExtractedText(new ExtractedTextRequest(), 0).text;
 
-
-                  /*  char upperCh = 0;
-                    if (!beforeDelText.toString().isEmpty() && beforeDelText.toString().contains("\n"))
-                    {
-                        String upperCaseChar = beforeDelText.toString().substring(beforeDelText.toString().lastIndexOf("\n") + 1);
-                         upperCh = upperCaseChar.charAt(0);
-                    }*/
-
-
-
-/*
-
-                    String lowerCaseChar = currentText.toString().substring(currentText.length() - 1);
-
-                    char lowerCh = lowerCaseChar.charAt(0);
-
-*/
-
-                /*    String formatted = currentText.toString().replace("\n", "");
-                    for (int i = 0; i <formatted.length(); i++) {
-                        char ch = formatted.charAt(i);
-
-                        if (Character.isUpperCase(ch)) {
-                            caps = true;
-                            setKeboradViewOnChange(true, keyboardView);
-                            break;
-                        } else if (Character.isLowerCase(ch)) {
-                            caps = false;
-                            setKeboradViewOnChange(false, keyboardView);
-                            break;
-                        }
-                    }*/
                     if (currentText.toString().length() != 0 && ".".equalsIgnoreCase(currentText.toString().substring(currentText.length() - 1))) {
                         caps = false;
                         setKeboradViewOnChange(false, keyboardView);
@@ -215,15 +195,6 @@ public class SimpleIME extends InputMethodService
                         capsLetterEnter = false;
                     }
                     inputConnection.commitText(String.valueOf(code), 1);
-/*
-                    if (code == 32) {
-                        if (".".equalsIgnoreCase(currentText.toString().substring(currentText.length() - 1))) {
-                            caps = true;
-                            setKeboradViewOnChange(true, keyboardView);
-                        }
-
-                    }
-*/
 
                     currentText = inputConnection.getExtractedText(new ExtractedTextRequest(), 0).text;
 
@@ -248,7 +219,6 @@ public class SimpleIME extends InputMethodService
 
     @Override
     public void onRelease(int primaryCode) {
-
         //do Something  ;
     }
 
@@ -279,26 +249,6 @@ public class SimpleIME extends InputMethodService
 
     }
 
-    private void playClick(int keyCode) {
-        AudioManager am = (AudioManager) getSystemService(AUDIO_SERVICE);
-        switch (keyCode) {
-            case 32:
-                am.playSoundEffect(AudioManager.FX_KEYPRESS_SPACEBAR);
-                break;
-            case Keyboard.KEYCODE_DONE:
-                am.playSoundEffect(AudioManager.FX_KEY_CLICK);
-                break;
-            case 10:
-                am.playSoundEffect(AudioManager.FX_KEYPRESS_RETURN);
-                break;
-            case Keyboard.KEYCODE_DELETE:
-                am.playSoundEffect(AudioManager.FX_KEYPRESS_DELETE);
-                break;
-            default:
-                am.playSoundEffect(AudioManager.FX_KEYPRESS_STANDARD);
-
-        }
-    }
 
     public int screenOrentaion() {
         return this.getResources().getConfiguration().orientation;
@@ -378,13 +328,6 @@ public class SimpleIME extends InputMethodService
     public void onStartInputView(EditorInfo info, boolean restarting) {
         super.onStartInputView(info, restarting);
 
-       /* if (currentText.toString().length() > 0) {
-            caps = false;
-            setKeboradViewOnChange(false, keyboardView);
-        } else {
-            caps = true;
-            setKeboradViewOnChange(true, keyboardView);
-        }*/
 
         caps = true;
         setKeboradViewOnChange(true, keyboardView);
@@ -395,10 +338,6 @@ public class SimpleIME extends InputMethodService
 
             keyCodeModeChange(keyboard);
         }
-
-
-
-
 
     }
 

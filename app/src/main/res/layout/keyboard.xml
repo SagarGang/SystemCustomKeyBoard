@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <android.inputmethodservice.KeyboardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/keyboard"
     android:layout_width="match_parent"
@@ -10,9 +11,8 @@
     android:keyBackground="@drawable/background_oped_orange"
     android:keyPreviewHeight="50dp"
     android:keyPreviewLayout="@layout/preview"
-    android:keyPreviewOffset="-12dp"
+    android:keyPreviewOffset="8dp"
     android:keyTextColor="@color/white"
-    android:verticalCorrection="-10dp" />
+    android:popupLayout="@layout/keyboard" />
 
 
-    <!-- android:keyPreviewOffset="@dimen/activity_horizontal_margin"-->
