@@ -214,12 +214,12 @@ public class SimpleIME extends InputMethodService
 
     @Override
     public void onPress(int primaryCode) {
-        //do Something  ;
+        //todo: check if first line and add top padding to keyboardview
     }
 
     @Override
     public void onRelease(int primaryCode) {
-        //do Something  ;
+        //todo: remove top padding from keyboardview.
     }
 
     @Override
