@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SimplyCustomKeyBoard.iml" filepath="$PROJECT_DIR$/SimplyCustomKeyBoard.iml" />
+      <module fileurl="file://D:\StudioWorkspace\SystemCustomKeyBoard\SimplyCustomKeyBoard.iml" filepath="D:\StudioWorkspace\SystemCustomKeyBoard\SimplyCustomKeyBoard.iml" />
       <module fileurl="file://$PROJECT_DIR$/SystemCustomKeyBoard.iml" filepath="$PROJECT_DIR$/SystemCustomKeyBoard.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
