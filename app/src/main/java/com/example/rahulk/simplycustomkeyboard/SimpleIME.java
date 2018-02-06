@@ -6,9 +6,7 @@ import android.inputmethodservice.InputMethodService;
 import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.KeyboardView;
 import android.text.TextUtils;
-import android.util.DisplayMetrics;
 import android.util.Log;
-import android.util.TypedValue;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -216,7 +214,7 @@ public class SimpleIME extends InputMethodService
     @Override
     public void onPress(int primaryCode) {
         //todo: check if first line and add top padding to keyboardview
-        switch (primaryCode) {
+        /*switch (primaryCode) {
             case 65:
             case 97:
             case 69:
@@ -241,13 +239,13 @@ public class SimpleIME extends InputMethodService
                 final float singleRowht = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 50, getResources().getDisplayMetrics());
                 int dp = (int) TypedValue.applyDimension( TypedValue.COMPLEX_UNIT_DIP, 50, displaymetrics );
                 keyboardView.setPadding(0, (int) singleRowht, 0, 0);
-        }
+        }*/
     }
 
     @Override
     public void onRelease(int primaryCode) {
         //todo: remove top padding from keyboardview.
-        keyboardView.setPadding(0, 0, 0, 0);
+//        keyboardView.setPadding(0, 0, 0, 0);
     }
 
     @Override

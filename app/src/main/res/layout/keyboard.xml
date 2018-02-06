@@ -4,15 +4,11 @@
     android:id="@+id/keyboard"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_alignParentBottom="true"
-    android:layout_centerHorizontal="true"
     android:focusable="true"
+    android:keyPreviewOffset="25sp"
+    android:keyPreviewHeight="40sp"
     android:focusableInTouchMode="true"
-    android:keyBackground="@drawable/background_oped_orange"
-    android:keyPreviewHeight="50dp"
     android:keyPreviewLayout="@layout/preview"
-    android:keyPreviewOffset="8dp"
+    android:keyBackground="@drawable/background_oped_orange"
     android:keyTextColor="@color/white"
-    android:popupLayout="@layout/keyboard" />
-
-
+     />

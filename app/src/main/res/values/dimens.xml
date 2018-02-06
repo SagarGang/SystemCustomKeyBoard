@@ -12,6 +12,7 @@
     <dimen name="margin_16dp">16dp</dimen>
     <dimen name="margin_8dp">8dp</dimen>
     <dimen name="kew_width">40dp</dimen>
+    <dimen name="key_offset">3%</dimen>
 
 
 </resources>
