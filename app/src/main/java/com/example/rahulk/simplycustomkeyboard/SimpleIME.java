@@ -213,44 +213,32 @@ public class SimpleIME extends InputMethodService
 
     @Override
     public void onPress(int primaryCode) {
-        //todo: check if first line and add top padding to keyboardview
-        /*switch (primaryCode) {
-            case 65:
-            case 97:
-            case 69:
-            case 101:
-            case 66:
-            case 98:
-            case 70:
-            case 102:
-            case 71:
-            case 103:
-            case 76:
-            case 108:
-            case 77:
-            case 109:
-            case 82:
-            case 114:
-            case 86:
-            case 118:
-            case 87:
-            case 119:
-                DisplayMetrics displaymetrics = new DisplayMetrics();
-                final float singleRowht = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 50, getResources().getDisplayMetrics());
-                int dp = (int) TypedValue.applyDimension( TypedValue.COMPLEX_UNIT_DIP, 50, displaymetrics );
-                keyboardView.setPadding(0, (int) singleRowht, 0, 0);
-        }*/
+        try {
+            Log.e("Simple ","onPress");
+        }
+        catch (Exception ex)
+        {
+            ex.printStackTrace();
+        }
+
+
     }
 
     @Override
     public void onRelease(int primaryCode) {
-        //todo: remove top padding from keyboardview.
-//        keyboardView.setPadding(0, 0, 0, 0);
+        try {
+            Log.e("Simple ","onRelease");
+        }
+        catch (Exception ex)
+        {
+            ex.printStackTrace();
+        }
     }
 
     @Override
     public void onText(CharSequence text) {
         //do Something  ;
+        Log.e("Simple ","onText");
     }
 
     @Override
