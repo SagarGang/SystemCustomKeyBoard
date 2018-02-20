@@ -14,5 +14,8 @@
     <dimen name="kew_width">40dp</dimen>
     <dimen name="key_offset">3%</dimen>
 
+    <dimen name="offset">25sp</dimen>
+    <dimen name="preview">40sp</dimen>
+
 
 </resources>
