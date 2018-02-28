@@ -11,6 +11,6 @@
     <dimen name="margin_8dp">8dp</dimen>
     <dimen name="kew_width">40dp</dimen>
 
-    <dimen name="offset">32sp</dimen>
-    <dimen name="preview">50sp</dimen>
+    <dimen name="offset">40sp</dimen>
+    <dimen name="preview">60sp</dimen>
 </resources>
