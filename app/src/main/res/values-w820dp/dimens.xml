@@ -6,5 +6,5 @@
     <dimen name="key_height">60dp</dimen>
     <dimen name="kew_width">40dp</dimen>
     <dimen name="offset">36sp</dimen>
-    <dimen name="preview">55sp</dimen>
+    <dimen name="preview">65sp</dimen>
 </resources>

@@ -13,5 +13,5 @@
 
 
     <dimen name="offset">28sp</dimen>
-    <dimen name="preview">45sp</dimen>
+    <dimen name="preview">55sp</dimen>
 </resources>
