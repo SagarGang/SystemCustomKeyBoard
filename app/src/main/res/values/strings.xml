@@ -6,10 +6,9 @@
     <string name="inst_inst">AEIOU Keyboard™ Installation Instructions</string>
     <string name="setting_page">Go to the Settings Page—Language and Input to activate the AEIOU Keyboard™ and choose it as your default keyboard.</string>
     <!--<string name="thank_you_for_using_our_aeiou_keyboard">Thank you for choosing our AEIOU Keyboard \u2122</string>-->
+     <!--u23CE-->
     <string name="activate_and_default">
-Put a \u2713 on AEIOU Keyboard™ to activate.
-Click on Default and choose AEIOU Keyboard™.
-Click Return \u23CE on your device to return to this instructions
+ Put a \u2713 on AEIOU Keyboard™ to activate.\nClick on Default and choose AEIOU Keyboard™.\nClick Return \u21B0 on your device to return to this  instructions
 page.</string>
 
     <string name="default_keyboard">NOW SET AS DEFAULT KEYBOARD</string>
