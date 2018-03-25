@@ -8,8 +8,7 @@
     <!--<string name="thank_you_for_using_our_aeiou_keyboard">Thank you for choosing our AEIOU Keyboard \u2122</string>-->
      <!--u23CE-->
     <string name="activate_and_default">
- Put a \u2713 on AEIOU Keyboard™ to activate.\nClick on Default and choose AEIOU Keyboard™.\nClick Return \u21B0 on your device to return to this  instructions
-page.</string>
+ Put a \u2713 on AEIOU Keyboard™ to activate.\nClick on Default and choose AEIOU Keyboard™.\nClick Return \u21B0  to return to this page.</string>
 
     <string name="default_keyboard">NOW SET AS DEFAULT KEYBOARD</string>
     <string name="first_enable">Please click here to setup</string>
@@ -23,8 +22,8 @@ page.</string>
     <string name="aeiou_email"> www.aeioukeyboard.com</string>
     <string name="click"><u>CLICK HERE</u></string>
     <string name="click_exit"><u>CLICK HERE TO EXIT</u></string>
-    <string name="changing_keyboard">Changing keyboards: To reinstall the QWERTY keyboard, press the World Globe key on the AEIOU Keyboard™. \nTo again install the AEIOU Keyboard™ click on the AEIOU app icon to go to the Settings Page.</string>
-    <string name="copy_wright">US Patent no. x,xxx,xxx;© 2018 Paul Streitz. All rights reserved. AEIOU Keyboard™ is a registered U.S. Trademark. The user is granted a royalty free license only for non-commercial private use. Software developers and manufacturers please contact for licensing at <u>www.aeioukeyboard.com</u></string>
+    <string name="changing_keyboard">To reinstall the QWERTY keyboard, press the  World Globe key on the AEIOU Keyboard™. \nTo again install the AEIOU Keyboard™ click on the AEIOU app icon to go to the Settings Page.</string>
+    <string name="copy_wright">US Patent 9933857;© 2018;© AEIOU Keyboard™. The user is granted a royalty free license only for non-commercial private use. Software developers and manufacturers please contact for licensing at <u>www.aeioukeyboard.com</u></string>
     <!--<string name="copy_wright">US Patent no. x,xxx,xxx;© 2018 Paul Streitz. All rights reserved.</string>-->
 
     <string name="thank">Thank you for selecting the AEIOU Keyboard™.\nThe Development Staff</string>

@@ -63,7 +63,7 @@
                 android:id="@+id/tv_setting_page"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TO GO TO THE SETTINGS PAGE"
+                android:text="TO GO TO SETTINGS"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/text_sise_16">
 

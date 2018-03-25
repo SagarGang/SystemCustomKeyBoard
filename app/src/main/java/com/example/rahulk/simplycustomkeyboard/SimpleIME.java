@@ -54,7 +54,7 @@ public class SimpleIME extends InputMethodService
             e.printStackTrace();
         }
 
-        keyboardView.setPreviewEnabled(true);
+//        keyboardView.setPreviewEnabled(true);
 
         showKeyBoard();
         return keyboardView;

@@ -7,4 +7,5 @@
     <dimen name="kew_width">40dp</dimen>
     <dimen name="offset">36sp</dimen>
     <dimen name="preview">65sp</dimen>
+    <dimen name="key_height_per">7%</dimen>
 </resources>

@@ -13,4 +13,5 @@
 
     <dimen name="offset">40sp</dimen>
     <dimen name="preview">60sp</dimen>
+    <dimen name="key_height_per">7%</dimen>
 </resources>

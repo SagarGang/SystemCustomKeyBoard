@@ -17,29 +17,28 @@
 */
 -->
 <Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
-    android:keyHeight="@dimen/key_height">
-    <Row android:keyboardMode="@integer/keyboard_normal">
+    android:keyHeight="@dimen/key_height"
+    >
+    <Row
+
+        android:keyboardMode="@integer/keyboard_normal">
         <Key
-            android:popupKeyboard="@xml/keyboard_popup_template"
             android:codes="97"
             android:keyEdgeFlags="left"
-
             android:keyIcon="@drawable/ver_a_caps"
              />
+
         <!--android:keyIcon="@drawable/alpha_cap_a_vertical"-->
         <Key
-            android:popupKeyboard="@xml/keyboard_popup_template"
             android:codes="101"
             android:keyIcon="@drawable/ver_e_caps" />
         <Key
-            android:popupKeyboard="@xml/keyboard_popup_template"
             android:keyIcon="@drawable/ver_b_caps"
             android:codes="98"
              />
 
         <!--android:keyIcon="@drawable/alpha_cap_b_vertical"-->
         <Key
-            android:popupKeyboard="@xml/keyboard_popup_template"
             android:codes="102"
             android:keyIcon="@drawable/ver_f_caps" />
         <Key

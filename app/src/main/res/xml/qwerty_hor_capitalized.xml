@@ -18,7 +18,8 @@
 -->
 <Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
     android:keyHeight="@dimen/key_height">
-    <Row android:keyboardMode="@integer/keyboard_normal">
+    <Row
+        android:keyboardMode="@integer/keyboard_normal">
         <Key
             android:codes="97"
             android:keyEdgeFlags="left"
